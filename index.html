@@ -1,0 +1,2725 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <title>Farha Qureshi | Senior .NET Developer</title>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial,sans-serif;
+            color: #1d1d1d
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            border-bottom: 2px solid #1d1d1d;
+            padding: 18px 5%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 5
+        }
+
+            nav a {
+                color: #1d1d1d;
+                text-decoration: none;
+                margin: 0 10px;
+                font-weight: 700
+            }
+
+        .hero, .section {
+            padding: 90px 7%
+        }
+
+        .hero {
+            background: #e3e3ff;
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 64px;
+            margin: 12px 0
+        }
+
+        h2 {
+            font-size: 42px;
+            margin: 0 0 35px
+        }
+
+        .lead {
+            font-size: 24px;
+            line-height: 1.5
+        }
+
+        .tag {
+            display: inline-block;
+            border: 2px solid;
+            border-radius: 30px;
+            background: #e3f2ff;
+            padding: 7px 14px;
+            font-weight: bold
+        }
+
+        .portrait {
+            width: 540px;
+            height: 570px;
+            border: 2px solid #1d1d1d;
+            border-radius: 270px 270px 20px 20px;
+            background-image: url('profile.jpg');
+            background-size: cover;
+            background-position: center 28%;
+            background-repeat: no-repeat;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 15px 24px;
+            border: 2px solid;
+            border-radius: 10px;
+            color: #1d1d1d;
+            text-decoration: none;
+            background: #fff;
+            box-shadow: 5px 5px #7575c8;
+            font-weight: bold
+        }
+
+        .cards, .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px
+        }
+
+        .services-heading {
+            text-align: center;
+            margin-bottom: 58px;
+        }
+
+        .services-heading h2 {
+            margin: 24px 0 0;
+            font-size: 52px;
+        }
+
+        .card {
+            min-height: 230px;
+            padding: 40px;
+            border: 2px solid #1d1d1d;
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .service-icon {
+            width: 110px;
+            height: 110px;
+            min-width: 110px;
+            background: #ffffff;
+            border: 2px solid #1d1d1d;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-icon img {
+            width: 58px;
+            height: 58px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .service-content {
+            flex: 1;
+        }
+
+        .service-content h3 {
+            margin: 0 0 18px;
+            font-size: 26px;
+            line-height: 1.25;
+        }
+
+        .service-content p {
+            margin: 0;
+            font-size: 20px;
+            line-height: 1.55;
+        }
+
+            .card:nth-child(1) {
+                background: #e3e3ff
+            }
+
+            .card:nth-child(2) {
+                background: #f3ffe3
+            }
+
+            .card:nth-child(3) {
+                background: #fde4f9
+            }
+
+            .card:nth-child(4) {
+                background: #e3f2ff
+            }
+
+        .about {
+            background: #e3e3ff;
+            border-top: 2px solid;
+            border-bottom: 2px solid
+        }
+
+        .timeline {
+            border-left: 3px solid;
+            margin-left: 120px;
+            padding-left: 36px
+        }
+
+        .job {
+            position: relative;
+            margin: 0 0 40px
+        }
+
+            .job:before {
+                content: '';
+                position: absolute;
+                width: 17px;
+                height: 17px;
+                border: 2px solid;
+                border-radius: 50%;
+                background: #fde4f9;
+                left: -47px;
+                top: 4px
+            }
+
+        .project {
+            border: 2px solid;
+            border-radius: 20px;
+            overflow: hidden
+        }
+
+            .project .visual {
+                height: 260px;
+                background: linear-gradient(135deg,#e3f2ff,#e3e3ff);
+                display: grid;
+                place-items: center;
+                font-size: 60px
+            }
+            
+            .project .visual img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+            }
+
+            .project .content {
+                padding: 25px
+            }
+
+        .process {
+            background: #e3e3ff;
+            border-top: 2px solid;
+            border-bottom: 2px solid
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 18px
+        }
+
+        .step {
+            border: 2px solid;
+            border-radius: 20px;
+            background: #fff;
+            padding: 24px
+        }
+
+        .skills {
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 2
+        }
+
+        .contact {
+            text-align: center
+        }
+
+        .footer {
+            padding: 35px 7%;
+            background: #e3e3ff;
+            border-top: 2px solid
+        }
+
+        .muted {
+            color: #555;
+            line-height: 1.6
+        }
+
+        .tech {
+            font-weight: bold;
+            color: #5757ad
+        }
+
+        @media(max-width:800px) {
+            .hero {
+                grid-template-columns: 1fr
+            }
+
+            .portrait {
+                min-height: 360px
+            }
+
+            .cards, .projects, .steps {
+                grid-template-columns: 1fr
+            }
+
+            h1 {
+                font-size: 45px
+            }
+
+            h2 {
+                font-size: 34px
+            }
+
+            .timeline {
+                margin-left: 10px
+            }
+
+            nav .links {
+                display: none
+            }
+
+            .services-heading {
+                text-align: left;
+                margin-bottom: 38px;
+            }
+
+            .services-heading h2 {
+                font-size: 40px;
+            }
+
+            .card {
+                min-height: auto;
+                padding: 28px;
+                gap: 20px;
+            }
+
+            .service-icon {
+                width: 76px;
+                height: 76px;
+                min-width: 76px;
+            }
+
+            .service-icon img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .service-content h3 {
+                font-size: 21px;
+                margin-bottom: 12px;
+            }
+
+            .service-content p {
+                font-size: 17px;
+            }
+        }
+
+        /* Portrait container */
+        .portrait-wrapper {
+            position: relative;
+            width: 540px;
+            max-width: 100%;
+            margin-left: auto;
+        }
+
+        /* Experience badge */
+        .experience-badge {
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            top: 10px;
+            left: -35px;
+            background: #e3f2ff;
+            border: 2px solid #1d1d1d;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+        }
+
+        /* Rotating text */
+        .rotating-text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            animation: rotateBadge 12s linear infinite;
+        }
+
+            /* Text around circle */
+        .rotating-text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            animation: rotateBadge 18s linear infinite;
+        }
+
+        @keyframes rotateBadge {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Center arrow */
+        .badge-arrow {
+            position: absolute;
+            font-size: 30px;
+            font-weight: 300;
+        }
+
+        /* Rotation */
+        @keyframes rotateBadge {
+
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Decorative stars */
+        .sparkles {
+            position: absolute;
+            right: -30px;
+            top: -60px;
+            font-size: 55px;
+            letter-spacing: 10px;
+        }
+        .circle-text {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            fill: #1d1d1d;
+        }
+
+        .contact-details {
+            margin-top: 35px;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 22px;
+            font-size: 20px;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            border: 2px solid #1d1d1d;
+            border-radius: 12px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 0 #1d1d1d;
+        }
+
+            .contact-icon svg {
+                width: 21px;
+                height: 21px;
+                fill: none;
+                stroke: #1d1d1d;
+                stroke-width: 2.3;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+
+        /* Hero Contact Details */
+
+        .contact-details {
+            margin-top: 35px;
+            margin-bottom: 25px;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 22px;
+            font-size: 20px;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            border: 2px solid #1d1d1d;
+            border-radius: 12px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 0 #1d1d1d;
+        }
+
+            .contact-icon svg {
+                width: 22px;
+                height: 22px;
+                fill: none;
+                stroke: #1d1d1d;
+                stroke-width: 2.3;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+
+        .contact-row a {
+            color: #1d1d1d;
+            text-decoration: none;
+        }
+
+            .contact-row a:hover {
+                color: #7575c8;
+            }
+    
+        .portfolio-button-wrap {
+            text-align: center;
+            margin-top: 46px;
+        }
+
+        .check-portfolio-btn {
+            display: inline-block;
+            padding: 17px 42px;
+            background: #ffffff;
+            color: #1d1d1d;
+            border: 2px solid #1d1d1d;
+            border-radius: 12px;
+            box-shadow: 0 7px 0 #7575c8, 0 9px 0 #1d1d1d;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .check-portfolio-btn:hover {
+            transform: translateY(2px);
+            box-shadow: 0 5px 0 #7575c8, 0 7px 0 #1d1d1d;
+        }
+
+
+        /* Centered About section */
+        .about { padding-top: 80px; padding-bottom: 90px; }
+        .about-top { max-width: 1120px; margin: 0 auto 70px; display: grid; grid-template-columns: 390px 1fr; gap: 70px; align-items: center; }
+        .about-visual-wrap { position: relative; width: 330px; height: 330px; margin: 0 auto; }
+        .about-visual { width: 100%; height: 100%; border: 2px solid #1d1d1d; border-radius: 50%; background-color: #a996cc; background-size: cover; background-position: center; }
+        .about-mini-badge { position: absolute; width: 108px; height: 108px; right: -18px; top: 25px; background: #e3f2ff; border: 2px solid #1d1d1d; border-radius: 50%; display: grid; place-items: center; overflow: hidden; }
+        .about-badge-rotating { position: absolute; inset: 4px; width: calc(100% - 8px); height: calc(100% - 8px); animation: rotateAboutBadge 16s linear infinite; }
+        .about-badge-text { fill: #1d1d1d; font-size: 8.2px; font-weight: 800; letter-spacing: 1.45px; }
+        .about-badge-arrow { position: relative; z-index: 2; font-size: 29px; font-weight: 400; line-height: 1; }
+        @keyframes rotateAboutBadge { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @media (prefers-reduced-motion: reduce) { .about-badge-rotating { animation: none; } }
+        .about-copy h2 { margin: 20px 0 16px; font-size: 42px; }
+        .about-lead { font-size: 20px; line-height: 1.55; margin: 0 0 16px; }
+        .about-copy .muted { font-size: 17px; }
+        .career-heading { text-align: center; max-width: 780px; margin: 0 auto 50px; }
+        .career-heading h2 { margin-bottom: 12px; }
+        .career-heading p { margin: 0; line-height: 1.6; color: #444; }
+        .career-timeline { max-width: 850px; margin: 0 auto; position: relative; }
+        .career-timeline:before { content: ''; position: absolute; left: 260px; top: 12px; bottom: 25px; width: 2px; background: #1d1d1d; }
+        .career-item { display: grid; grid-template-columns: 225px 30px 1fr; column-gap: 20px; position: relative; padding-bottom: 45px; }
+        .career-date { text-align: right; padding-top: 3px; font-size: 12px; font-weight: 800; letter-spacing: .6px; }
+        .career-dot { width: 14px; height: 14px; border: 2px solid #1d1d1d; border-radius: 50%; margin: 2px auto 0; position: relative; z-index: 2; }
+        .dot-purple { background:#e3e3ff; }.dot-pink{background:#fde4f9}.dot-yellow{background:#fff5c9}.dot-blue{background:#e3f2ff}
+        .career-details h3 { margin: 0 0 7px; font-size: 20px; }
+        .career-role { margin: 0 0 14px; font-weight: 600; }
+        .career-details p:last-child { margin: 0; color: #444; line-height: 1.55; }
+        #projects > .tag, #projects > h2 { display: table; margin-left: auto; margin-right: auto; text-align: center; }
+        #projects > h2 { margin-top: 20px; margin-bottom: 45px; }
+
+        @media(max-width:800px) {
+
+            .about-top {
+                grid-template-columns: 1fr;
+                gap: 38px;
+                text-align: center;
+            }
+
+            .about-visual-wrap {
+                width: 250px;
+                height: 250px;
+            }
+
+            .about-mini-badge {
+                width: 88px;
+                height: 88px;
+                right: -8px;
+            }
+
+            .career-timeline:before {
+                left: 14px;
+            }
+
+            .career-item {
+                grid-template-columns: 30px 1fr;
+                column-gap: 16px;
+                padding-bottom: 38px;
+            }
+
+            .career-date {
+                grid-column: 2;
+                text-align: left;
+                padding: 0 0 8px;
+            }
+
+            .career-dot {
+                grid-column: 1;
+                grid-row: 1 / span 2;
+                margin-top: 2px;
+            }
+
+            .career-details {
+                grid-column: 2;
+            }
+
+
+            /* HERO PHOTO */
+
+            .portrait-wrapper {
+                width: 100%;
+                max-width: 520px;
+                margin: 0 auto;
+            }
+
+            .portrait {
+                width: 520px;
+                height: 650px;
+                border: 2px solid #1d1d1d;
+                border-radius: 260px 260px 20px 20px;
+                background-image: url('profile.jpg');
+                background-size: contain;
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                background-color: #f5f2ed;
+            }
+        }
+
+/* ---------- PROCESS ---------- */
+.process-upgrade{background:#e3e3ff;border-top:2px solid #1d1d1d;border-bottom:2px solid #1d1d1d;padding:90px 7%;overflow:hidden}.process-head{text-align:center;max-width:820px;margin:0 auto 50px}.process-head .pill,.contact-head .pill{display:inline-block;padding:8px 18px;border:2px solid #1d1d1d;border-radius:999px;background:#e3f2ff;font-weight:800;letter-spacing:1px}.process-head h2{font-size:46px;line-height:1.15;margin:24px 0 0}.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1250px;margin:auto}.process-card{position:relative;min-height:250px;padding:30px;border:2px solid #1d1d1d;border-radius:24px;background:#fff;transition:.25s ease}.process-card:hover{transform:translateY(-8px) rotate(-.5deg);box-shadow:8px 9px 0 #1d1d1d}.process-card:nth-child(1),.process-card:nth-child(4){background:#f3ffe3}.process-card:nth-child(2),.process-card:nth-child(5){background:#fde4f9}.process-card:nth-child(3),.process-card:nth-child(6){background:#ffeeeb}.process-no{position:absolute;right:28px;top:26px;font-size:20px}.process-icon{width:72px;height:72px;border:2px solid #1d1d1d;border-radius:50%;background:#fff;display:grid;place-items:center;margin-bottom:28px}.process-icon img{width:40px;height:40px;object-fit:contain}.process-card h3{font-size:24px;margin:0 0 14px}.process-card p{font-size:17px;line-height:1.55;margin:0}.process-arrow{display:grid;place-items:center;width:48px;height:48px;border:2px solid #1d1d1d;border-radius:50%;background:#e3f2ff;margin:34px auto 0;font-size:25px;animation:arrowFloat 1.8s ease-in-out infinite}@keyframes arrowFloat{50%{transform:translateX(8px)}}
+/* ---------- RUNNING TOOLS MARQUEE ---------- */
+        .tools-label {
+            text-align: center;
+            margin: 80px 0 30px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #1d1d1d;
+            letter-spacing: 0.3px;
+        }
+
+.tools-marquee{width:100%;overflow:hidden;white-space:nowrap;mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent)}.tools-track{display:inline-flex;align-items:center;gap:32px;min-width:max-content;animation:toolsRun 24s linear infinite;font-size:27px;font-weight:800}.tools-marquee:hover .tools-track{animation-play-state:paused}.tool-star{font-size:18px}@keyframes toolsRun{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* ---------- CONTACT ---------- */
+.contact-upgrade{position:relative;padding:90px 7%;background:#fff;overflow:hidden}.contact-head{text-align:center}.contact-head h2{font-size:48px;line-height:1.15;margin:22px auto 55px;max-width:700px}.contact-cards{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:900px;margin:auto}.contact-card{min-height:230px;border:2px solid #1d1d1d;border-radius:24px;padding:30px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:.25s ease}.contact-card:hover{transform:translateY(-7px);box-shadow:8px 8px 0 #7575c8}.contact-card.location{background:#e3f2ff}.contact-card.reach{background:#ffeeeb}.contact-round-icon{width:72px;height:72px;border:2px solid #1d1d1d;background:#fff;border-radius:50%;display:grid;place-items:center;margin-bottom:18px}.contact-round-icon img{width:38px;height:38px;object-fit:contain}.contact-card h3{font-size:22px;margin:0 0 12px}.contact-card p,.contact-card a{font-size:17px;line-height:1.5;color:#1d1d1d;text-decoration:none;margin:0}.resume-box{max-width:1000px;margin:55px auto 0;border:2px solid #1d1d1d;border-radius:24px;padding:60px 30px;text-align:center;background:linear-gradient(135deg,#fff 0%,#f9f7ff 100%);position:relative}.resume-box:before{content:'✦';position:absolute;left:30px;top:24px;font-size:30px;animation:twinkle 1.6s ease-in-out infinite}.resume-box:after{content:'✧';position:absolute;right:33px;bottom:24px;font-size:38px;animation:twinkle 1.6s ease-in-out infinite .5s}@keyframes twinkle{50%{transform:scale(1.35) rotate(15deg);opacity:.55}}.resume-box h3{font-size:35px;margin:0 0 15px}.resume-box p{font-size:18px;max-width:680px;margin:0 auto 25px;line-height:1.5}.resume-btn{display:inline-block;background:#7575c8;color:white!important;text-decoration:none;padding:14px 27px;border-radius:999px;font-weight:800;border:2px solid #1d1d1d;transition:.2s}.resume-btn:hover{transform:translateY(-3px);box-shadow:5px 6px 0 #1d1d1d}.decor{position:absolute;font-size:45px;pointer-events:none}.decor.one{left:5%;top:26%;animation:floaty 3s ease-in-out infinite}.decor.two{right:6%;top:40%;animation:floaty 3s ease-in-out infinite .8s}@keyframes floaty{50%{transform:translateY(-12px) rotate(8deg)}}
+@media(max-width:850px){.process-grid{grid-template-columns:1fr}.contact-cards{grid-template-columns:1fr}.process-head h2,.contact-head h2{font-size:36px}.tools-track{font-size:22px}.resume-box h3{font-size:28px}}
+@media(prefers-reduced-motion:reduce){.tools-track,.process-arrow,.resume-box:before,.resume-box:after,.decor{animation:none}}
+
+        /* ==========================
+   HERO CONTACT DETAILS
+   ========================== */
+
+        .hero-contact-list {
+            margin-top: 30px;
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+
+        /* Each contact row */
+
+        .hero-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 19px;
+            line-height: 1.4;
+        }
+
+
+        /* Small icon box like reference */
+
+        .hero-contact-icon {
+            width: 38px;
+            height: 38px;
+            min-width: 38px;
+            background: #ffffff;
+            border: 1.8px solid #1d1d1d;
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 0 #1d1d1d;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+
+            /* Actual icon */
+
+            .hero-contact-icon img {
+                width: 19px;
+                height: 19px;
+                object-fit: contain;
+            }
+
+
+        /* Email / phone / LinkedIn */
+
+        .hero-contact-item a {
+            color: #1d1d1d;
+            text-decoration: none;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+
+            .hero-contact-item a:hover {
+                color: #5757ad;
+            }
+
+
+        /* Small animation */
+
+        .hero-contact-item:hover .hero-contact-icon {
+            transform: translateY(-2px);
+            box-shadow: 2px 4px 0 #7575c8;
+        }
+
+        .hero-contact-list {
+            margin-top: 32px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+
+        .hero-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            font-size: 19px;
+        }
+
+
+        /* White rounded square */
+
+        .hero-contact-icon {
+            width: 38px;
+            height: 38px;
+            min-width: 38px;
+            background: #ffffff;
+            border: 2px solid #1d1d1d;
+            border-radius: 9px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 3px 0 #1d1d1d;
+        }
+
+
+            /* SVG icon */
+
+            .hero-contact-icon svg {
+                width: 18px;
+                height: 18px;
+                fill: none;
+                stroke: #1d1d1d;
+                stroke-width: 2;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+
+
+        .hero-contact-item a {
+            color: #1d1d1d;
+            text-decoration: none;
+        }
+
+        .hero-contact-list {
+            margin: 30px 0 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .hero-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .hero-contact-icon {
+            width: 38px;
+            height: 38px;
+            min-width: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            border: 2px solid #1d1d1d;
+            border-radius: 9px;
+            box-shadow: 0 3px 0 #1d1d1d;
+        }
+
+            .hero-contact-icon svg {
+                width: 19px;
+                height: 19px;
+                fill: none;
+                stroke: #1d1d1d;
+                stroke-width: 2;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+
+        .hero-contact-item a {
+            color: #1d1d1d;
+            text-decoration: none;
+        }
+
+            .hero-contact-item a:hover {
+                color: #5757ad;
+            }
+
+        .process-icon svg {
+            width: 38px;
+            height: 38px;
+            fill: none;
+            stroke: #1d1d1d;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .service-icon svg {
+            width: 50px;
+            height: 50px;
+            fill: none;
+            stroke: #1d1d1d;
+            stroke-width: 1.7;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .contact-round-icon svg {
+            width: 34px;
+            height: 34px;
+            fill: none;
+            stroke: #1d1d1d;
+            stroke-width: 1.7;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* ==============================
+   ABOUT DECORATIVE CURVED LINES
+   ============================== */
+
+        .about-curves {
+            position: absolute;
+            width: 190px;
+            height: 150px;
+            left: -125px;
+            top: 95px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+
+            .about-curves svg {
+                width: 100%;
+                height: 100%;
+                overflow: visible;
+            }
+
+
+            .about-curves path {
+                fill: none;
+                stroke: #1d1d1d;
+                stroke-width: 2.2;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+
+        /* ==========================================
+   STRONGER SCROLL REVEAL ANIMATIONS
+   ========================================== */
+
+
+        /* Section headings */
+
+        .reveal-heading {
+            opacity: 0;
+            transform: translateY(70px);
+            transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+            .reveal-heading.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+
+        /* Cards coming from left */
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-80px) scale(0.96);
+            transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+
+        /* Cards coming from right */
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(80px) scale(0.96);
+            transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+
+            .reveal-left.show,
+            .reveal-right.show {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+            }
+
+
+        /* General bottom-to-top reveal */
+
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(70px) scale(0.97);
+            transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+            .reveal-up.show {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+
+
+        /* Stagger effect */
+
+        .delay-1 {
+            transition-delay: 0.08s;
+        }
+
+        .delay-2 {
+            transition-delay: 0.16s;
+        }
+
+        .delay-3 {
+            transition-delay: 0.24s;
+        }
+
+        .delay-4 {
+            transition-delay: 0.32s;
+        }
+
+        .delay-5 {
+            transition-delay: 0.40s;
+        }
+
+        .delay-6 {
+            transition-delay: 0.48s;
+        }
+
+
+        /* Keep animations accessible */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .reveal-heading,
+            .reveal-left,
+            .reveal-right,
+            .reveal-up {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+
+        .tools-label span {
+            display: inline-block;
+            padding: 8px 18px;
+            background: #e3f2ff;
+            border: 2px solid #1d1d1d;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+
+
+        /* RESPONSIVE OVERRIDES - COPILOT */
+        html,
+        body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        img,
+        svg {
+            max-width: 100%;
+        }
+
+        section {
+            scroll-margin-top: 75px;
+        }
+
+        /* Tablet layout */
+        @media (min-width: 801px) and (max-width: 1100px) {
+            .hero {
+                grid-template-columns: 1fr 0.9fr;
+                gap: 35px;
+                padding: 70px 5%;
+            }
+
+            h1 {
+                font-size: 52px;
+            }
+
+            .lead {
+                font-size: 20px;
+            }
+
+            .portrait-wrapper {
+                width: 100%;
+                max-width: 500px;
+            }
+
+            .portrait {
+                width: 100%;
+                height: 480px;
+            }
+
+            .experience-badge {
+                width: 120px;
+                height: 120px;
+                left: -20px;
+            }
+
+            .card {
+                padding: 28px;
+                gap: 22px;
+            }
+
+            .service-icon {
+                width: 90px;
+                height: 90px;
+                min-width: 90px;
+            }
+
+            .service-content h3 {
+                font-size: 22px;
+            }
+
+            .service-content p {
+                font-size: 17px;
+            }
+        }
+
+        /* Main mobile layout */
+        @media (max-width: 800px) {
+            .hero,
+            .section,
+            .process-upgrade,
+            .contact-upgrade {
+                padding-left: 22px;
+                padding-right: 22px;
+            }
+
+            nav {
+                padding: 15px 22px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                padding-top: 60px;
+                padding-bottom: 65px;
+            }
+
+            h1 {
+                font-size: clamp(40px, 11vw, 52px);
+                line-height: 1.05;
+            }
+
+            .lead {
+                font-size: 19px;
+                line-height: 1.55;
+            }
+
+            .hero-contact-item {
+                font-size: 16px;
+                align-items: flex-start;
+            }
+
+            .hero-contact-item span,
+            .hero-contact-item a {
+                overflow-wrap: anywhere;
+            }
+
+            .btn {
+                padding: 14px 20px;
+            }
+
+            .portrait-wrapper {
+                width: min(100%, 540px);
+                max-width: 540px;
+                margin: 0 auto;
+            }
+
+            .portrait {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1 / 0.92;
+                border-radius: 50% 50% 18px 18px;
+                background-position: center;
+            }
+
+            .experience-badge {
+                width: 110px;
+                height: 110px;
+                left: -5px;
+                top: 5px;
+            }
+
+            .circle-text {
+                font-size: 11px;
+            }
+
+            .badge-arrow {
+                font-size: 25px;
+            }
+
+            .sparkles {
+                right: 5px;
+                top: -45px;
+                font-size: 38px;
+            }
+        }
+
+        /* Phone layout */
+        @media (max-width: 600px) {
+            .services-heading {
+                text-align: center;
+            }
+
+            .services-heading h2 {
+                font-size: 38px;
+            }
+
+            .cards {
+                gap: 20px;
+            }
+
+            .card {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 26px;
+                gap: 18px;
+            }
+
+            .service-icon {
+                width: 72px;
+                height: 72px;
+                min-width: 72px;
+            }
+
+            .service-icon svg {
+                width: 35px;
+                height: 35px;
+            }
+
+            .service-content h3 {
+                font-size: 22px;
+            }
+
+            .service-content p {
+                font-size: 16px;
+                line-height: 1.55;
+            }
+
+            .check-portfolio-btn {
+                padding: 14px 28px;
+                font-size: 17px;
+            }
+
+            .about-top {
+                gap: 45px;
+            }
+
+            .about-visual-wrap {
+                width: 270px;
+                height: 270px;
+            }
+
+            .about-curves {
+                width: 115px;
+                height: 105px;
+                left: -45px;
+                top: 90px;
+            }
+
+            .about-mini-badge {
+                width: 82px;
+                height: 82px;
+                right: -5px;
+                top: 20px;
+            }
+
+            .about-copy h2 {
+                font-size: 36px;
+            }
+
+            .about-lead {
+                font-size: 18px;
+            }
+
+            .about-copy .muted {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            .career-heading {
+                margin-bottom: 40px;
+            }
+
+            .career-heading h2 {
+                font-size: 34px;
+            }
+
+            .career-item {
+                padding-bottom: 42px;
+            }
+
+            .career-date {
+                font-size: 11px;
+            }
+
+            .career-details h3 {
+                font-size: 19px;
+            }
+
+            .career-details p {
+                font-size: 15px;
+                line-height: 1.55;
+            }
+
+            #projects h2 {
+                font-size: 34px;
+                line-height: 1.2;
+            }
+
+            .projects {
+                gap: 22px;
+            }
+
+            .project .visual {
+                height: 210px;
+            }
+
+            .project .content {
+                padding: 22px;
+            }
+
+            .project .content h3 {
+                font-size: 21px;
+                margin-top: 0;
+            }
+
+            .project .content p {
+                font-size: 15px;
+                line-height: 1.55;
+            }
+
+            .tech {
+                font-size: 14px !important;
+                line-height: 1.6 !important;
+            }
+
+            .process-head h2 {
+                font-size: 34px;
+            }
+
+            .process-grid {
+                gap: 20px;
+            }
+
+            .process-card {
+                min-height: auto;
+                padding: 25px;
+            }
+
+            .process-icon {
+                width: 62px;
+                height: 62px;
+                margin-bottom: 22px;
+            }
+
+            .process-icon svg {
+                width: 31px;
+                height: 31px;
+            }
+
+            .process-card h3 {
+                font-size: 22px;
+            }
+
+            .process-card p {
+                font-size: 16px;
+            }
+
+            .process-no {
+                right: 22px;
+                top: 22px;
+                font-size: 17px;
+            }
+
+            .tools-label {
+                margin-top: 60px;
+            }
+
+            .tools-label span {
+                font-size: 13px;
+                padding: 7px 14px;
+            }
+
+            .tools-track {
+                font-size: 19px;
+                gap: 22px;
+            }
+
+            .tool-star {
+                font-size: 13px;
+            }
+
+            .contact-head h2 {
+                font-size: 34px;
+                line-height: 1.2;
+                margin-bottom: 40px;
+            }
+
+            .contact-cards {
+                gap: 20px;
+            }
+
+            .contact-card {
+                min-height: 210px;
+                padding: 25px 18px;
+            }
+
+            .contact-card p,
+            .contact-card a {
+                font-size: 15px;
+                overflow-wrap: anywhere;
+            }
+
+            .contact-round-icon {
+                width: 62px;
+                height: 62px;
+            }
+
+            .contact-round-icon svg {
+                width: 29px;
+                height: 29px;
+            }
+
+            .resume-box {
+                margin-top: 35px;
+                padding: 45px 22px;
+            }
+
+            .resume-box h3 {
+                font-size: 27px;
+            }
+
+            .resume-box p {
+                font-size: 16px;
+            }
+        }
+
+        /* Extra-small phones */
+        @media (max-width: 360px) {
+            .hero,
+            .section,
+            .process-upgrade,
+            .contact-upgrade {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            h1 {
+                font-size: 37px;
+            }
+
+            .lead {
+                font-size: 17px;
+            }
+
+            .hero-contact-item {
+                font-size: 14px;
+            }
+
+            .hero-contact-icon {
+                width: 34px;
+                height: 34px;
+                min-width: 34px;
+            }
+
+            .portrait-wrapper {
+                width: 100%;
+            }
+
+            .experience-badge {
+                width: 92px;
+                height: 92px;
+            }
+
+            .about-visual-wrap {
+                width: 230px;
+                height: 230px;
+            }
+
+            .about-curves {
+                display: none;
+            }
+
+            .card,
+            .process-card {
+                padding: 22px;
+            }
+        }
+
+
+
+        /* =====================================================
+           FINAL MOBILE RESPONSIVENESS + RELIABLE ANIMATION FIX
+           ===================================================== */
+        html, body {
+            max-width: 100%;
+            overflow-x: clip;
+        }
+
+        .hero > *,
+        .about-top > *,
+        .cards > *,
+        .projects > *,
+        .process-grid > *,
+        .contact-cards > * {
+            min-width: 0;
+        }
+
+        .hero-contact-item span,
+        .hero-contact-item a,
+        .service-content,
+        .career-details,
+        .project .content,
+        .process-card,
+        .contact-card,
+        .resume-box {
+            overflow-wrap: anywhere;
+            word-break: normal;
+        }
+
+        /* Keep the technology marquee moving on touch devices.
+           The old :hover rule can remain active after a mobile tap. */
+        .tools-marquee {
+            position: relative;
+            width: 100%;
+            max-width: 100vw;
+            overflow: hidden;
+            touch-action: pan-y;
+        }
+
+        .tools-track {
+            display: flex;
+            width: max-content;
+            max-width: none;
+            flex-wrap: nowrap;
+            animation-name: toolsRun !important;
+            animation-duration: 24s !important;
+            animation-timing-function: linear !important;
+            animation-iteration-count: infinite !important;
+            animation-play-state: running !important;
+            will-change: transform;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        /* Pause only for a real mouse, never for touch/mobile. */
+        @media (hover: hover) and (pointer: fine) {
+            .tools-marquee:hover .tools-track {
+                animation-play-state: paused !important;
+            }
+        }
+
+        @keyframes toolsRun {
+            from { transform: translate3d(0, 0, 0); }
+            to   { transform: translate3d(-50%, 0, 0); }
+        }
+
+        /* Keep marquee active even when reduced motion is enabled.
+           Other decorative/reveal animations remain accessibility-aware. */
+        @media (prefers-reduced-motion: reduce) {
+            .tools-track {
+                animation: toolsRun 30s linear infinite !important;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .hero,
+            .section,
+            .process-upgrade,
+            .contact-upgrade {
+                width: 100%;
+                padding-left: clamp(18px, 5vw, 28px);
+                padding-right: clamp(18px, 5vw, 28px);
+            }
+
+            .hero {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 44px;
+            }
+
+            .hero > div:first-child {
+                width: 100%;
+            }
+
+            .hero-contact-list {
+                width: 100%;
+            }
+
+            .hero-contact-item {
+                width: 100%;
+                align-items: flex-start;
+            }
+
+            .portrait-wrapper {
+                position: relative;
+                width: 520px;
+                max-width: 100%;
+                margin-left: auto;
+            }
+
+            .portrait {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                min-height: 0;
+                aspect-ratio: 1 / 0.94;
+                border-radius: 50% 50% 18px 18px;
+                background-position: center 35%;
+            }
+
+            /* Side-entry transforms can clip cards on phones.
+               Use a vertical reveal while retaining attractive motion. */
+            .reveal-left,
+            .reveal-right,
+            .reveal-up,
+            .reveal-heading {
+                transform: translate3d(0, 34px, 0) scale(0.985);
+                transition-duration: .65s;
+            }
+
+            .reveal-left.show,
+            .reveal-right.show,
+            .reveal-up.show,
+            .reveal-heading.show {
+                opacity: 1;
+                transform: translate3d(0, 0, 0) scale(1);
+            }
+
+            .cards,
+            .projects,
+            .process-grid,
+            .contact-cards {
+                width: 100%;
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .card,
+            .project,
+            .process-card,
+            .contact-card,
+            .resume-box {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .tools-marquee {
+                width: calc(100% + 2px);
+                margin-left: -1px;
+                -webkit-mask-image: none;
+                mask-image: none;
+            }
+
+            .decor {
+                opacity: .35;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 13px 18px;
+            }
+
+            .hero,
+            .section,
+            .process-upgrade,
+            .contact-upgrade {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .hero {
+                padding-top: 48px;
+                padding-bottom: 56px;
+                gap: 38px;
+            }
+
+            h1 {
+                font-size: clamp(35px, 11.5vw, 46px);
+                line-height: 1.08;
+                overflow-wrap: anywhere;
+            }
+
+            h2,
+            .services-heading h2,
+            .about-copy h2,
+            #projects h2,
+            .process-head h2,
+            .contact-head h2 {
+                font-size: clamp(30px, 9vw, 36px);
+                line-height: 1.18;
+            }
+
+            .lead {
+                font-size: 17px;
+            }
+
+            .hero-contact-item {
+                gap: 10px;
+                font-size: 14px;
+            }
+
+            .hero-contact-icon {
+                width: 34px;
+                height: 34px;
+                min-width: 34px;
+            }
+
+            .btn,
+            .check-portfolio-btn,
+            .resume-btn {
+                max-width: 100%;
+                white-space: normal;
+                text-align: center;
+            }
+
+            .portrait-wrapper {
+                width: 100%;
+                padding: 0 2px;
+            }
+
+            .portrait {
+                aspect-ratio: 1 / 1;
+                border-radius: 48% 48% 16px 16px;
+            }
+
+            .experience-badge {
+                width: 88px;
+                height: 88px;
+                left: 0;
+                top: 4px;
+            }
+
+            .circle-text {
+                font-size: 10px;
+                letter-spacing: 1.5px;
+            }
+
+            .badge-arrow {
+                font-size: 22px;
+            }
+
+            .sparkles {
+                right: 2px;
+                top: -34px;
+                font-size: 30px;
+                letter-spacing: 5px;
+            }
+
+            .card {
+                padding: 23px;
+                border-radius: 22px;
+            }
+
+            .service-icon {
+                width: 66px;
+                height: 66px;
+                min-width: 66px;
+            }
+
+            .service-icon svg {
+                width: 32px;
+                height: 32px;
+            }
+
+            .service-content h3 {
+                font-size: 20px;
+            }
+
+            .service-content p {
+                font-size: 15px;
+            }
+
+            .about-visual-wrap {
+                width: min(245px, 78vw);
+                height: min(245px, 78vw);
+            }
+
+            .about-curves {
+                display: none;
+            }
+
+            .about-mini-badge {
+                width: 76px;
+                height: 76px;
+                right: -2px;
+                top: 16px;
+            }
+
+            .career-timeline::before {
+                left: 10px;
+            }
+
+            .career-item {
+                grid-template-columns: 22px minmax(0, 1fr);
+                column-gap: 11px;
+            }
+
+            .career-dot {
+                width: 12px;
+                height: 12px;
+            }
+
+            .career-details h3 {
+                font-size: 18px;
+            }
+
+            .career-details p,
+            .career-role {
+                font-size: 14px;
+            }
+
+            .project .visual {
+                height: clamp(170px, 52vw, 215px);
+            }
+
+            .project .content {
+                padding: 20px;
+            }
+
+            .project .content h3 {
+                font-size: 20px;
+            }
+
+            .process-card {
+                padding: 22px;
+                border-radius: 20px;
+            }
+
+            .process-no {
+                right: 18px;
+                top: 18px;
+            }
+
+            .tools-label {
+                margin: 54px 0 24px;
+                font-size: 18px;
+            }
+
+            .tools-label span {
+                max-width: 100%;
+                font-size: 12px;
+                padding: 7px 12px;
+            }
+
+            .tools-track {
+                gap: 20px;
+                font-size: 18px;
+                animation-duration: 20s !important;
+            }
+
+            .contact-head h2 br {
+                display: none;
+            }
+
+            .contact-card {
+                min-height: 195px;
+                padding: 22px 16px;
+            }
+
+            .contact-card p,
+            .contact-card a {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            .resume-box {
+                padding: 42px 18px;
+                border-radius: 20px;
+            }
+
+            .resume-box::before {
+                left: 16px;
+                top: 16px;
+            }
+
+            .resume-box::after {
+                right: 16px;
+                bottom: 16px;
+            }
+
+            .resume-box h3 {
+                font-size: 24px;
+                overflow-wrap: anywhere;
+            }
+
+            .footer {
+                padding: 28px 18px;
+                font-size: 13px;
+                text-align: center;
+            }
+
+            .decor {
+                display: none;
+            }
+        }
+
+        @media (max-width: 340px) {
+            .hero,
+            .section,
+            .process-upgrade,
+            .contact-upgrade {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            .tag,
+            .process-head .pill,
+            .contact-head .pill {
+                font-size: 12px;
+                padding: 6px 11px;
+            }
+
+            .hero-contact-item {
+                font-size: 13px;
+            }
+
+            .experience-badge {
+                width: 80px;
+                height: 80px;
+            }
+
+            .card,
+            .process-card,
+            .project .content {
+                padding: 18px;
+            }
+
+            .about-visual-wrap {
+                width: 220px;
+                height: 220px;
+            }
+        }
+
+        /* =========================================
+   MOBILE CAREER PATH - CARD LAYOUT
+   ========================================= */
+
+        @media (max-width: 600px) {
+
+            .career-heading {
+                text-align: center;
+                margin-bottom: 32px;
+            }
+
+                .career-heading h2 {
+                    text-align: center;
+                    margin-bottom: 12px;
+                }
+
+                .career-heading p {
+                    text-align: center;
+                    max-width: 330px;
+                    margin: 0 auto;
+                    line-height: 1.55;
+                }
+
+
+            /* Remove desktop timeline line */
+            .career-timeline:before {
+                display: none;
+            }
+
+            .career-timeline {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+
+            /* Each experience becomes a card */
+
+            .career-item {
+                display: block;
+                width: 100%;
+                margin-bottom: 22px;
+                padding: 24px 20px;
+                background: rgba(255, 255, 255, 0.55);
+                border: 2px solid #1d1d1d;
+                border-radius: 18px;
+                box-shadow: 5px 5px 0 #7575c8;
+                text-align: left;
+            }
+
+
+            /* Date becomes a small tag */
+
+            .career-date {
+                display: inline-block;
+                margin-bottom: 14px;
+                padding: 6px 11px;
+                background: #ffffff;
+                border: 1.5px solid #1d1d1d;
+                border-radius: 20px;
+                font-size: 11px;
+                font-weight: 800;
+                letter-spacing: 0.3px;
+                text-align: left;
+            }
+
+
+            /* Hide timeline dot */
+
+            .career-dot {
+                display: none;
+            }
+
+
+            .career-details {
+                width: 100%;
+                text-align: left;
+            }
+
+
+                .career-details h3 {
+                    margin: 0 0 5px;
+                    font-size: 20px;
+                    line-height: 1.25;
+                }
+
+
+            .career-role {
+                margin: 0 0 14px;
+                font-size: 15px;
+                font-weight: 700;
+                line-height: 1.4;
+                color: #1d1d1d;
+            }
+
+
+            .career-details p:last-child {
+                margin: 0;
+                font-size: 14px;
+                line-height: 1.65;
+                color: #444;
+            }
+
+
+            /* Small hover/touch styling */
+
+            .career-item {
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
+            }
+        }
+
+
+        /* Extra-small mobile */
+
+        @media (max-width: 360px) {
+
+            .career-item {
+                padding: 20px 17px;
+                border-radius: 16px;
+            }
+
+            .career-details h3 {
+                font-size: 19px;
+            }
+
+            .career-role {
+                font-size: 14px;
+            }
+
+            .career-details p:last-child {
+                font-size: 13.5px;
+            }
+
+            .career-date {
+                font-size: 10px;
+            }
+        }
+
+</style>
+
+<!-- Hero portrait override: shorter frame removes excess space above the head -->
+<style>
+.portrait-wrapper {
+    position: relative;
+    width: min(100%, 500px);
+    max-width: 500px;
+    margin-left: auto;
+}
+.portrait {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 2.65;
+    border: 2px solid #1d1d1d;
+    border-radius: 250px 250px 20px 20px;
+    background-image: url('profile.jpg');
+    background-size: 100% auto !important;
+    background-position: center bottom !important;
+    background-repeat: no-repeat !important;
+    background-color: #f5f2ed;
+}
+@media (min-width: 801px) and (max-width: 1100px) {
+    .portrait-wrapper {
+        width: min(100%, 440px);
+        max-width: 440px;
+    }
+    .portrait {
+        height: auto;
+        aspect-ratio: 2 / 2.65;
+    }
+}
+@media (max-width: 800px) {
+    .portrait-wrapper {
+        width: min(100%, 470px);
+        max-width: 470px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .portrait {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 2 / 2.65;
+        border-radius: 50% 50% 18px 18px;
+        background-size: 100% auto !important;
+        background-position: center bottom !important;
+    }
+}
+@media (max-width: 480px) {
+    .portrait-wrapper {
+        width: min(100%, 390px);
+        padding: 0;
+    }
+    .portrait {
+        aspect-ratio: 2 / 2.65;
+        border-radius: 48% 48% 16px 16px;
+    }
+}
+</style>
+
+<style>
+/* Mobile navigation */
+.mobile-menu-btn { display: none; }
+@media (max-width: 800px) {
+  nav { align-items: center; position: sticky; }
+  nav .links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 2px solid #1d1d1d;
+    padding: 10px 18px 18px;
+    flex-direction: column;
+    gap: 2px;
+    box-shadow: 0 8px 18px rgba(0,0,0,.08);
+  }
+  nav .links.open { display: flex; }
+  nav .links a {
+    display: block;
+    margin: 0;
+    padding: 12px 6px;
+    font-size: 16px;
+  }
+  .mobile-menu-btn {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 38px;
+    padding: 0;
+    border: 2px solid #1d1d1d;
+    border-radius: 9px;
+    background: #fff;
+    color: #1d1d1d;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+  }
+}
+</style>
+
+</head>
+<body>
+    <nav><strong>FQ.</strong><button class="mobile-menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-links">☰</button><div class='links' id='primary-links'><a href='#home'>Home</a><a href='#work'>What I Do</a><a href='#about'>About</a><a href='#projects'>Projects</a><a href='#process'>Process</a><a href='#contact'>Contact</a></div></nav>
+    <section class='hero' id='home'>
+        <div>
+            <span class='tag'>✱ HELLO !</span><h1>I'm Farha Qureshi.</h1><p class='lead'>Development Team Lead & Senior .NET Developer with 10+ years of experience building scalable enterprise applications across FinTech, digital onboarding, transportation and government domains.</p>
+            <div class="hero-contact-list">
+
+                <!-- LOCATION -->
+                <div class="hero-contact-item">
+                    <span class="hero-contact-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </span>
+
+                    <span>India | Open to relocation: UAE &amp; Saudi Arabia</span>
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="hero-contact-item">
+                    <span class="hero-contact-icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                            <path d="m3 7 9 6 9-6"></path>
+                        </svg>
+                    </span>
+
+                    <a href="mailto:YOUR_EMAIL">
+                        farha.qureshi.tech@gmail.com
+                    </a>
+                </div>
+
+
+                <!-- PHONE -->
+                <div class="hero-contact-item">
+                    <span class="hero-contact-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                         19.79 19.79 0 0 1-8.63-3.07
+                         19.5 19.5 0 0 1-6-6
+                         19.79 19.79 0 0 1-3.07-8.67
+                         A2 2 0 0 1 4.11 2h3
+                         a2 2 0 0 1 2 1.72
+                         12.84 12.84 0 0 0 .7 2.81
+                         2 2 0 0 1-.45 2.11L8.09 9.91
+                         a16 16 0 0 0 6 6l1.27-1.27
+                         a2 2 0 0 1 2.11-.45
+                         12.84 12.84 0 0 0 2.81.7
+                         A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                    </span>
+
+                    <a href="tel:+919174147816">
+                        +91 91741 47816
+                    </a>
+                </div>
+
+
+                <!-- LINKEDIN -->
+                <div class="hero-contact-item">
+                    <span class="hero-contact-icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                            <path d="M8 11v6"></path>
+                            <path d="M8 8v.01"></path>
+                            <path d="M12 17v-6"></path>
+                            <path d="M12 14a3 3 0 0 1 6 0v3"></path>
+                        </svg>
+                    </span>
+
+                    <a href="https://linkedin.com/in/farha-qureshi-640438105"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        LinkedIn Profile
+                    </a>
+                </div>
+
+            </div>
+
+
+
+            <a class="btn" href="#projects">
+                See My Work
+            </a>
+        </div><div class="portrait-wrapper">
+
+            <div class="experience-badge">
+                <svg class="rotating-text"
+                     viewBox="0 0 200 200">
+
+                    <defs>
+                        <path id="circlePath"
+                              d="M 100,100
+               m -72,0
+               a 72,72 0 1,1 144,0
+               a 72,72 0 1,1 -144,0" />
+                    </defs>
+
+                    <text class="circle-text">
+                        <textPath href="#circlePath">
+                            10+ YEARS • WORK EXPERIENCE • 10+ YEARS • WORK EXPERIENCE •
+                        </textPath>
+                    </text>
+
+                </svg>
+                <div class="badge-arrow">↗</div>
+            </div>
+
+            <div class="portrait"></div>
+
+            <div class="sparkles">✦ ✧</div>
+
+        </div>
+    </section>
+    <section class="section" id="work">
+        <div class="services-heading">
+            <span class="tag">✱ MY EXPERTISE</span>
+            <h2>What I Do</h2>
+        </div>
+
+        <div class="cards">
+            <!-- Change src below to your Backend icon image path -->
+            <div class="card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M8 9l-4 3 4 3"></path>
+                        <path d="M16 9l4 3-4 3"></path>
+                        <path d="M14 5l-4 14"></path>
+                    </svg>
+                </div>
+                <div class="service-content">
+                    <h3>Backend &amp; API Development</h3>
+                    <p>Design and development of scalable enterprise applications using C#, .NET / .NET Core, ASP.NET Core, REST APIs, SQL Server and secure backend integrations.</p>
+                </div>
+            </div>
+
+            <!-- Change src below to your Cloud icon image path -->
+            <div class="card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M17.5 19H7
+                 a5 5 0 0 1-.7-9.95
+                 A7 7 0 0 1 19.7 11
+                 A4 4 0 0 1 17.5 19z">
+                        </path>
+
+                        <path d="M12 12v5"></path>
+                        <path d="M9.5 14.5L12 12l2.5 2.5"></path>
+                    </svg>
+                </div>
+                <div class="service-content">
+                    <h3>Cloud &amp; Serverless Solutions</h3>
+                    <p>Building cloud and serverless solutions using AWS Lambda, SQS, SNS, S3, API Gateway and CloudWatch, with growing exposure to GCP through AWS-to-GCP cloud migration initiatives.</p>
+                </div>
+            </div>
+
+            <!-- Change src below to your Enterprise application icon image path -->
+            <div class="card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+
+                        <rect x="3"
+                              y="4"
+                              width="18"
+                              height="16"
+                              rx="2">
+                        </rect>
+
+                        <path d="M3 9h18"></path>
+
+                        <path d="M8 14h3"></path>
+                        <path d="M8 17h6"></path>
+
+                        <circle cx="7" cy="6.5" r=".5"></circle>
+
+                    </svg>
+                </div>
+                <div class="service-content">
+                    <h3>Enterprise Architecture &amp; Integration</h3>
+                    <p>Designing business-critical enterprise solutions with secure APIs, third-party integrations, authentication, distributed workflows and scalable application architecture.</p>
+                </div>
+            </div>
+
+            <!-- Change src below to your Production and delivery icon image path -->
+            <div class="card">
+                <div class="service-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path d="M12 3v12"></path>
+
+                        <path d="M8 7l4-4 4 4"></path>
+
+                        <path d="M5 13v6
+                 a2 2 0 0 0 2 2h10
+                 a2 2 0 0 0 2-2v-6">
+                        </path>
+
+                        <path d="M8 17h8"></path>
+
+                    </svg>
+
+                </div>
+                <div class="service-content">
+                    <h3>Technical Leadership &amp; Delivery</h3>
+                    <p>Technical ownership across development, code reviews, troubleshooting, CI/CD, releases, production support and collaboration with cross-functional teams.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-button-wrap">
+            <a class="check-portfolio-btn" href="#projects">Check Portfolio</a>
+        </div>
+    </section>
+    <section class="section about" id="about">
+        <div class="about-top">
+            <div class="about-visual-wrap">
+                <!-- OPTIONAL ABOUT IMAGE: change about-photo.jpeg to your image path -->
+                <div class="about-curves" aria-hidden="true">
+
+                    <svg viewBox="0 0 220 170">
+
+                        <!-- Top wave -->
+                        <path d="
+            M5 35
+            C25 55, 45 55, 65 30
+            C85 65, 110 65, 130 35
+            C150 65, 175 65, 205 45
+        "></path>
+
+                        <!-- Middle wave -->
+                        <path d="
+            M5 85
+            C30 105, 55 105, 75 75
+            C95 110, 120 110, 140 80
+            C160 110, 185 110, 210 90
+        "></path>
+
+                        <!-- Bottom wave -->
+                        <path d="
+            M10 135
+            C35 150, 60 150, 80 120
+            C100 155, 125 155, 145 125
+            C165 155, 190 155, 215 135
+        "></path>
+
+                    </svg>
+
+                </div>
+                <div class="about-visual" style="background-image:url('about-photo.jpg')"></div>
+                
+            </div>
+
+            <div class="about-copy">
+                <span class="tag">✱ ABOUT</span>
+                <h2>More about me</h2>
+                <p class="about-lead">I'm a Development Team Lead and Senior .NET professional with 10+ years of experience designing, developing and supporting scalable enterprise applications.</p>
+                <p class="muted">
+                    My experience spans FinTech & trading, eKYC & digital onboarding,
+                    transportation and government solutions. I work across C#, .NET,
+                    ASP.NET Core/Web API, SQL Server and AWS, with full-stack exposure
+                    using React.js. I am currently upskilling in Angular and expanding
+                    my cloud capabilities through GCP exposure and AWS-to-GCP migration initiatives.
+                </p>
+            </div>
+        </div>
+
+        <div class="career-heading">
+            <h2>My career path</h2>
+            <p>My career has evolved from hands-on development to leading the design, delivery and support of enterprise solutions.</p>
+        </div>
+
+        <div class="career-timeline">
+            <div class="career-item">
+                <div class="career-date">Jan 2024 - Present</div>
+                <div class="career-dot dot-purple"></div>
+                <div class="career-details">
+                    <h3>Accenture</h3><p class="career-role">Development Team Lead / Senior .NET Developer</p>
+                                      <p>Leading development and production support for an enterprise Transport Management System, coordinating developers, QA, business stakeholders and dependent teams. Hands-on with C#, .NET, REST APIs, SQL Server and AWS serverless services, with responsibility across troubleshooting, cloud workflows, release delivery, code reviews and engineering best practices. Expanding cloud experience through an AWS-to-GCP migration initiative.</p>
+                </div>
+            </div>
+            <div class="career-item">
+                <div class="career-date">May 2022 - Dec 2023</div>
+                <div class="career-dot dot-pink"></div>
+                <div class="career-details">
+                    <h3>InfoBeans</h3><p class="career-role">Senior Software Engg</p>
+                    <p>Designed, developed and maintained enterprise web and desktop applications using C#, .NET, SQL Server and REST APIs. Delivered third-party integrations and business-critical enhancements while focusing on performance, reliability, maintainability and production support.</p>
+                </div>
+            </div>
+            <div class="career-item">
+                <div class="career-date">Sep 2019 - May 2022</div>
+                <div class="career-dot dot-yellow"></div>
+                <div class="career-details">
+                    <h3>Swastika Investmart</h3><p class="career-role">.NET Developer | FinTech / Trading / eKYC</p>
+                    <p>Developed and enhanced a digital eKYC and customer onboarding platform supporting Aadhaar authentication, PAN verification, digital signing, payment gateway, bank verification and third-party integrations. Built and maintained REST APIs and backend components supporting secure and seamless customer onboarding.</p>
+                </div>
+            </div>
+            <div class="career-item">
+                <div class="career-date">Sep 2016 - Jan 2019</div>
+                <div class="career-dot dot-blue"></div>
+                <div class="career-details">
+                    <h3>National Informatics Centre</h3><p class="career-role">Programmer | Government Applications</p>
+                    <p>Developed and supported large-scale government applications, including Food Grain Procurement platforms serving critical public-sector operations. Worked extensively with SQL Server, stored procedures, reporting and high-volume transactional data processing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class='section' id='projects'>
+        <span class='tag'>FEATURED WORK</span><h2>Selected Enterprise Solutions &amp; Engineering Work</h2><div class='projects'>
+            <article class='project'>
+                <div class="visual">
+                    <img src="ekyc-project.png" alt="eKYC Digital Account Opening Project">
+                </div><div class='content'>
+                    <h3>eKYC & Digital Account Opening</h3>
+                    <p>Enterprise digital onboarding platform supporting Aadhaar authentication, PAN verification, DigiLocker, bank verification, digital signing and third-party integrations. Contributed to backend APIs, secure integrations and reliable onboarding workflows.</p>
+                    <p class='tech'>C# • .NET • Web API • SQL Server • SignalR</p>
+                </div>
+            </article><article class='project'>
+                <div class="visual">
+                    <img src="tms-project.png" alt="Transport Management System Project">
+                </div><div class='content'>
+                    <h3>Transport Management System</h3>
+                    <p>Enterprise transportation platform supporting route generation, operational workflows and shuttle billing. Worked on .NET backend services, AWS serverless processing, queue-based workflows, integrations and production issue resolution.</p>
+                    <p class='tech'>C# • .NET • SQL Server • REST API • AWS Lambda • SQS • S3 • CloudWatch</p>
+                </div>
+            </article><article class='project'>
+                <div class="visual">
+                    <img src="food-procurement-project.png" alt="Government Food Procurement Project">
+                </div><div class='content'>
+                    <h3>Food Procurement System</h3>
+                    <p>Large-scale government platform supporting food-grain procurement and public-sector operations. Worked on application development, SQL Server, stored procedures, reporting and high-volume transactional data processing.</p>
+                    <p class='tech'>C# • ASP.NET • SQL Server • SSRS • Web Services</p>
+                </div>
+            </article><article class='project'>
+                <div class="visual">
+                    <img src="PDS.png" alt="Food Rating API Project">
+                </div><div class='content'>
+                    <h3>Public Distribution System</h3>
+                    <p>Government public distribution platform supporting the receipt, allocation and distribution of food grains to eligible beneficiaries. Worked on application development, web services, database processing, reporting and operational workflows.</p>
+                    <p class='tech'>C# • ASP.NET • SQL Server • SSRS • Web Services</p>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="process-upgrade" id="process">
+        <div class="process-head"><span class="pill">✱ PROCESS</span><h2>A step-by-step approach to building reliable enterprise solutions</h2></div>
+        <div class="process-grid">
+            <article class="process-card">
+                <span class="process-no">01.</span><div class="process-icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="6"></circle>
+                        <path d="M16 16l5 5"></path>
+                        <circle cx="11" cy="11" r="2"></circle>
+                    </svg>
+                </div><h3>Understand</h3><p>Understand business requirements, existing workflows, system dependencies and key technical challenges.</p>
+            </article>
+            <article class="process-card">
+                <span class="process-no">02.</span><div class="process-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4 4h6v6H4z"></path>
+                        <path d="M14 4h6v6h-6z"></path>
+                        <path d="M4 14h6v6H4z"></path>
+                        <path d="M17 14v6"></path>
+                        <path d="M14 17h6"></path>
+                    </svg>
+                </div><h3>Design</h3><p>Define solution architecture, APIs, database changes, integrations and scalable application workflows.</p>
+            </article>
+            <article class="process-card">
+                <span class="process-no">03.</span><div class="process-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M8 9l-4 3 4 3"></path>
+                        <path d="M16 9l4 3-4 3"></path>
+                        <path d="M14 5l-4 14"></path>
+                    </svg>
+                </div><h3>Develop</h3><p>Build clean, secure and maintainable .NET solutions following established engineering standards and coding practices.</p>
+            </article>
+            <article class="process-card">
+                <span class="process-no">04.</span><div class="process-icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="6" cy="12" r="3"></circle>
+                        <circle cx="18" cy="6" r="3"></circle>
+                        <circle cx="18" cy="18" r="3"></circle>
+
+                        <path d="M9 11l6-4"></path>
+                        <path d="M9 13l6 4"></path>
+                    </svg>
+                </div><h3>Integrate</h3><p>Integrate cloud services, messaging queues, databases and secure third-party APIs across enterprise workflows.</p>
+            </article>
+            <article class="process-card">
+                <span class="process-no">05.</span><div class="process-icon">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="5" y="3" width="14" height="18" rx="2"></rect>
+
+                        <path d="M9 8h6"></path>
+
+                        <path d="M8 14l2 2 5-5"></path>
+                    </svg>
+                </div><h3>Test</h3><p>Validate critical business flows through unit, integration and functional testing, with focus on reliability and edge cases.</p>
+            </article>
+            <article class="process-card">
+                <span class="process-no">06.</span><div class="process-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21V9"></path>
+
+                        <path d="M8 13l4-4 4 4"></path>
+
+                        <path d="M5 5h14"></path>
+
+                        <path d="M5 5v3"></path>
+
+                        <path d="M19 5v3"></path>
+                    </svg>
+                </div><h3>Deliver</h3><p>Support CI/CD, releases, monitoring, troubleshooting and production readiness to ensure reliable application delivery.</p>
+            </article>
+        </div>
+        <!--<div class="process-arrow">→</div>-->
+        <div class="tools-label">
+            <span>✱ MY TECHNOLOGY STACK</span>
+        </div>
+        <div class="tools-marquee" aria-label="Technology tools">
+            <div class="tools-track">
+                <span>C#</span><span class="tool-star">✦</span>
+                <span>.NET Core</span><span class="tool-star">✦</span>
+                <span>ASP.NET</span><span class="tool-star">✦</span>
+                <span>Web API</span><span class="tool-star">✦</span>
+                <span>React.js</span><span class="tool-star">✦</span>
+                <span>Angular (Upskilling)</span><span class="tool-star">✦</span>
+                <span>SQL Server</span><span class="tool-star">✦</span>
+                <span>AWS Lambda</span><span class="tool-star">✦</span>
+                <span>SQS</span><span class="tool-star">✦</span>
+                <span>S3</span><span class="tool-star">✦</span>
+                <span>API Gateway</span><span class="tool-star">✦</span>
+                <span>GCP</span><span class="tool-star">✦</span>
+                <span>Azure DevOps</span><span class="tool-star">✦</span>
+                <span>Git</span><span class="tool-star">✦</span>
+                <span>Postman</span><span class="tool-star">✦</span>
+                <span>Visual Studio</span><span class="tool-star">✦</span>
+                <span>GitHub Copilot</span><span class="tool-star">✦</span>
+
+                <span>C#</span><span class="tool-star">✦</span>
+                <span>.NET Core</span><span class="tool-star">✦</span>
+                <span>ASP.NET</span><span class="tool-star">✦</span>
+                <span>Web API</span><span class="tool-star">✦</span>
+                <span>React.js</span><span class="tool-star">✦</span>
+                <span>Angular (Upskilling)</span><span class="tool-star">✦</span>
+                <span>SQL Server</span><span class="tool-star">✦</span>
+                <span>AWS Lambda</span><span class="tool-star">✦</span>
+                <span>SQS</span><span class="tool-star">✦</span>
+                <span>S3</span><span class="tool-star">✦</span>
+                <span>API Gateway</span><span class="tool-star">✦</span>
+                <span>GCP</span><span class="tool-star">✦</span>
+                <span>Azure DevOps</span><span class="tool-star">✦</span>
+                <span>Git</span><span class="tool-star">✦</span>
+                <span>Postman</span><span class="tool-star">✦</span>
+                <span>Visual Studio</span><span class="tool-star">✦</span>
+                <span>GitHub Copilot</span><span class="tool-star">✦</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-upgrade" id="contact">
+        <span class="decor one">✉</span><span class="decor two">☁</span>
+        <div class="contact-head">
+            <span class="pill">✱ CONTACT</span><h2>
+                Looking for an experienced .NET professional?
+                <br>Let's connect.
+            </h2>
+        </div>
+        <div class="contact-cards">
+            <div class="contact-card location">
+                <div class="contact-round-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                </div><h3>Location &amp; Mobility</h3><p>India</p><p>Open to relocation: UAE &amp; Saudi Arabia</p>
+            </div>
+            <div class="contact-card reach">
+                <div class="contact-round-icon">
+                    <svg viewBox="0 0 24 24">
+
+                        <rect x="3"
+                              y="5"
+                              width="18"
+                              height="14"
+                              rx="2">
+                        </rect>
+
+                        <path d="M3 7l9 6 9-6"></path>
+
+                    </svg>
+                </div><h3>Let's Connect</h3><a href="mailto:YOUR_EMAIL">farha.qureshi.tech@gmail.com</a><a href="tel:+919174147816">+91 91741 47816</a><a href="https://linkedin.com/in/farha-qureshi-640438105" target="_blank" rel="noopener">View LinkedIn Profile</a>
+            </div>
+        </div>
+        <div class="resume-box">
+            <h3>Download Farha Qureshi's Resume</h3>
+            <p>Explore my experience across enterprise .NET development, technical leadership, cloud solutions, FinTech and large-scale applications.</p>
+            <a class="resume-btn" href="Farha-Qureshi-Resume.pdf" download>⇩ &nbsp; Download Resume</a>
+        </div>
+    </section>
+    <footer class='footer'>© 2026 Farha Qureshi. All rights reserved.</footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileMenuButton = document.querySelector(".mobile-menu-btn");
+            const primaryLinks = document.querySelector("#primary-links");
+            if (mobileMenuButton && primaryLinks) {
+                mobileMenuButton.addEventListener("click", function () {
+                    const isOpen = primaryLinks.classList.toggle("open");
+                    mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+                    mobileMenuButton.textContent = isOpen ? "×" : "☰";
+                });
+                primaryLinks.querySelectorAll("a").forEach(link => {
+                    link.addEventListener("click", function () {
+                        primaryLinks.classList.remove("open");
+                        mobileMenuButton.setAttribute("aria-expanded", "false");
+                        mobileMenuButton.textContent = "☰";
+                    });
+                });
+            }
+
+            const addRevealClasses = (selector, classFactory) => {
+                document.querySelectorAll(selector).forEach((element, index) => {
+                    classFactory(element, index);
+                });
+            };
+
+            addRevealClasses(
+                ".services-heading, .about-copy, .career-heading, #projects > .tag, #projects > h2, .process-head, .tools-label, .contact-head",
+                element => element.classList.add("reveal-heading")
+            );
+
+            addRevealClasses(".card", (element, index) => {
+                element.classList.add(index % 2 === 0 ? "reveal-left" : "reveal-right");
+                element.classList.add("delay-" + ((index % 4) + 1));
+            });
+
+            addRevealClasses(".career-item", (element, index) => {
+                element.classList.add("reveal-up", "delay-" + ((index % 4) + 1));
+            });
+
+            addRevealClasses(".project", (element, index) => {
+                element.classList.add(index % 2 === 0 ? "reveal-left" : "reveal-right");
+                element.classList.add("delay-" + ((index % 4) + 1));
+            });
+
+            addRevealClasses(".process-card", (element, index) => {
+                element.classList.add("reveal-up", "delay-" + ((index % 6) + 1));
+            });
+
+            addRevealClasses(".contact-card, .resume-box", (element, index) => {
+                element.classList.add("reveal-up", "delay-" + ((index % 3) + 1));
+            });
+
+            const revealElements = document.querySelectorAll(
+                ".reveal-heading, .reveal-left, .reveal-right, .reveal-up"
+            );
+
+            if (!("IntersectionObserver" in window)) {
+                revealElements.forEach(element => element.classList.add("show"));
+                return;
+            }
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    } else if (entry.boundingClientRect.top > window.innerHeight * 0.15) {
+                        /* Reset only after the element moves below the viewport,
+                           so the reveal can play again on the next scroll. */
+                        entry.target.classList.remove("show");
+                    }
+                });
+            }, {
+                threshold: 0.08,
+                rootMargin: "0px 0px -24px 0px"
+            });
+
+            revealElements.forEach(element => observer.observe(element));
+
+            /* Mobile browsers can preserve a sticky hover state after tapping.
+               Explicitly keep the marquee running after touch and visibility changes. */
+            const tracks = document.querySelectorAll(".tools-track");
+            const keepMarqueeRunning = () => {
+                tracks.forEach(track => {
+                    track.style.animationPlayState = "running";
+                });
+            };
+
+            document.addEventListener("touchstart", keepMarqueeRunning, { passive: true });
+            document.addEventListener("visibilitychange", () => {
+                if (!document.hidden) {
+                    requestAnimationFrame(keepMarqueeRunning);
+                }
+            });
+            window.addEventListener("pageshow", keepMarqueeRunning);
+            keepMarqueeRunning();
+        });
+    </script>
+</body>
+</html>
