@@ -1448,16 +1448,18 @@
             min-width: 0;
         }
 
-        .hero-contact-item span,
-        .hero-contact-item a,
         .service-content,
         .career-details,
         .project .content,
         .process-card,
-        .contact-card,
         .resume-box {
-            overflow-wrap: anywhere;
+            overflow-wrap: break-word;
             word-break: normal;
+        }
+        .hero-contact-item span,
+        .hero-contact-item a,
+        .contact-card {
+            overflow-wrap: anywhere;
         }
 
         /* Keep the technology marquee moving on touch devices.
@@ -2155,7 +2157,10 @@
 }
 /* final fixes: photo fills frame, justified text */
 .portrait{background-size:cover!important;background-position:center top!important}
-p:not(.tag):not(.tech):not(.career-role){text-align:justify!important;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+/* Natural text flow: no justification, no hyphenation, balanced line endings */
+p, li, h1, h2, h3{hyphens:none!important;-webkit-hyphens:none!important;word-break:normal}
+p{text-wrap:pretty}
+h1, h2, h3{text-wrap:balance}
 .career-date{line-height:1.5}
 </style>
 
@@ -2178,14 +2183,7 @@ p:not(.tag):not(.tech):not(.career-role){text-align:justify!important;text-justi
                         </svg>
                     </span>
 
-                    <span>Pune, Maharashtra |
-
-
-
-
-
-
-</span>
+                    <span>Pune, Maharashtra, India</span>
                 </div>
 
 
@@ -2446,7 +2444,7 @@ p:not(.tag):not(.tech):not(.career-role){text-align:justify!important;text-justi
                         <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
                         <circle cx="12" cy="10" r="3"></circle>
                     </svg>
-                </div><h3>Location &amp; Availability</h3><p>Pune, Maharashtra, India</p><p></p>
+                </div><h3>Location &amp; Availability</h3><p>Pune, Maharashtra, India</p>
             </div>
             <div class="contact-card reach">
                 <div class="contact-round-icon">
